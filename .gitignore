@@ -1,2 +1,7 @@
 /.apt_generated
 /.factorypath
+/target/
+.settings
+.classpath
+.project
+infinitest.filters
