@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
    <modelVersion>4.0.0</modelVersion>
 
    <artifactId>itext-carriage</artifactId>
@@ -9,11 +10,21 @@
       <artifactId>parent</artifactId>
       <version>0.8.0</version>
    </parent>
-   
+
    <name>iText Carriage</name>
    <inceptionYear>2014</inceptionYear>
    <description>Allows Konik to use iText PDF for attaching and detaching invoices to PDFs</description>
-   
+
+   <scm>
+      <connection>scm:git:git://github.com/konik-io/itext-carriage.git</connection>
+      <developerConnection>scm:git:git@github.com:konik-io/itext-carriage</developerConnection>
+      <url>https://github.com/konik-io/itext-carriage</url>
+   </scm>
+   <issueManagement>
+      <system>GitHub Issues</system>
+      <url>https://github.com/konik-io/itext-carriage/issues</url>
+   </issueManagement>
+
    <properties>
       <itext.lib>5.5.2</itext.lib>
    </properties>
@@ -71,5 +82,5 @@
          <scope>provided</scope>
       </dependency>
    </dependencies>
-   
+
 </project>
