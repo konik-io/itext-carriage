@@ -46,7 +46,7 @@ public class ITextPdfInvoiceAppenderBenchmark extends DefaultBenchmark {
    private final ITextInvoiceAppender appender = new ITextInvoiceAppender();
 
    private DefaultAppendParameter createParameter() {
-      InputStream inputStreamXml = getClass().getResourceAsStream("/ZUGFeRD-invoice.xml");
+      InputStream inputStreamXml = getClass().getResourceAsStream("/Musterrechnung_Einfach.xml");
       InputStream inputStreamPdf = getClass().getResourceAsStream("/acme_invoice-42.pdf");
       OutputStream resultingPdf = new ByteArrayOutputStream();
       DefaultAppendParameter parameter = new DefaultAppendParameter(inputStreamPdf, inputStreamXml, resultingPdf , "1.0", "BASIC");

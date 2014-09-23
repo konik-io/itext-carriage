@@ -36,8 +36,10 @@ public class ITextInvoiceAppenderTest {
    
    private static final String MUSTERRECHNUNG_EINFACH_XML = "/Musterrechnung_Einfach.xml";
    private static final String ACME_INVOICE_42_PDF = "/acme_invoice-42.pdf";
+   private static final String ACME_INVOICE_42_PDF_A1 = "/acme_invoice-42_A1.pdf";
    
    private static final String TARGET_ACME_INVOICE_42_PDF = "target/acme_invoice-42.pdf";
+   private static final String TARGET_ACME_INVOICE_42_PDF_A1 = "target/acme_invoice-42_A1.pdf";
    
    FileAppender appender;
    InputStream isPdf;
@@ -58,4 +60,17 @@ public class ITextInvoiceAppenderTest {
       appender.append(appendable);
       assertThat(file).exists();
    }
+   
+   @Test
+   public void appendA1Pdf() throws Exception {
+      InputStream isPdfA1 = getClass().getResourceAsStream(ACME_INVOICE_42_PDF_A1);
+      
+      File file = new File(TARGET_ACME_INVOICE_42_PDF_A1);
+      FileOutputStream outPdf = new FileOutputStream(file);
+      AppendParameter appendable = new DefaultAppendParameter(isPdfA1, isXml, outPdf,"1.0","COMFORT");
+      appender.append(appendable);
+      assertThat(file).exists();
+   }
+
+
 }
